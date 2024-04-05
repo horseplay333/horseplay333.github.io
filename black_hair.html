@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+  s</title>
+<style>
+    canvas {
+        border: 1px solid black;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<canvas id="smileyCanvas" width="200" height="200"></canvas>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const canvas = document.getElementById("smileyCanvas");
+    const ctx = canvas.getContext("2d");
+
+    function drawSmiley(x, y) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw face
+        ctx.beginPath();
+        ctx.arc(x, y, 80, 0, Math.PI * 2);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+        // Draw eyes
+        ctx.beginPath();
+        ctx.arc(x - 40, y - 20, 15, 0, Math.PI * 2);
+        ctx.arc(x + 40, y - 20, 15, 0, Math.PI * 2);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        // Draw mouth
+        ctx.beginPath();
+        ctx.arc(x, y + 20, 50, Math.PI * 0.1, Math.PI * 0.9);
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 8;
+        ctx.stroke();
+    }
+
+    canvas.addEventListener("click", function(event) {
+        const mouseX = event.clientX - canvas.getBoundingClientRect().left;
+        const mouseY = event.clientY - canvas.getBoundingClientRect().top;
+        drawSmiley(mouseX, mouseY);
+    });
+});
+</script>
+
+</body>
+</html>
