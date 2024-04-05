@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-  
-  s</title>
+<title>Smiley Face Canvas</title>
 <style>
     canvas {
         border: 1px solid black;
@@ -15,7 +13,7 @@
 </head>
 <body>
 
-<canvas id="smileyCanvas" width="200" height="200"></canvas>
+<canvas id="smileyCanvas" width="400" height="400"></canvas>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -27,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Draw face
         ctx.beginPath();
-        ctx.arc(x, y, 80, 0, Math.PI * 2);
+        ctx.arc(x, y, 150, 0, Math.PI * 2);
         ctx.fillStyle = "yellow";
         ctx.fill();
         ctx.strokeStyle = "black";
@@ -36,16 +34,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Draw eyes
         ctx.beginPath();
-        ctx.arc(x - 40, y - 20, 15, 0, Math.PI * 2);
-        ctx.arc(x + 40, y - 20, 15, 0, Math.PI * 2);
+        ctx.arc(x - 60, y - 40, 30, 0, Math.PI * 2);
+        ctx.arc(x + 60, y - 40, 30, 0, Math.PI * 2);
         ctx.fillStyle = "black";
         ctx.fill();
 
         // Draw mouth
         ctx.beginPath();
-        ctx.arc(x, y + 20, 50, Math.PI * 0.1, Math.PI * 0.9);
+        ctx.arc(x, y + 60, 100, Math.PI * 0.1, Math.PI * 0.9);
         ctx.strokeStyle = "black";
-        ctx.lineWidth = 8;
+        ctx.lineWidth = 12;
         ctx.stroke();
     }
 
@@ -55,6 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
         drawSmiley(mouseX, mouseY);
     });
 });
+</script>
+
+</body>
+</html>
+
 </script>
 
 </body>
