@@ -7,36 +7,23 @@
 <style>
 
     body {
-        background-color: black;
-        font-family: Arial, sans-serif;
-        color: white;
-        padding: 20px;
-        text-align: center;
+        background-color: black; /* Corrected background-color property */
+        font-family: Arial, sans-serif; /* Changed font to Arial for better visibility */
+        color: white; /* Changed font color to white */
+        padding: 20px; /* Added padding around the content */
+        text-align: center; /* Center align text */
     }
     
     h1 {
-        color: yellow;
+        color: yellow; /* Set h1 color to yellow */
     }
     
     #smileyCanvas {
-        display: block;
-        margin: 0 auto;
-        border: 1px solid black;
+        display: block; /* Ensure canvas is block-level */
+        margin: 0 auto; /* Center canvas */
+        border: 2px solid white; /* Set canvas border to white */
         cursor: pointer;
-        margin-top: 20px;
-    }
-    
-    .dark-mode-toggle {
-        background-color: #555; 
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 20px; 
-        cursor: pointer;
+        margin-top: 20px; /* Added margin-top for spacing */
     }
 
 </style>
@@ -60,8 +47,6 @@
 </p>
 
 <canvas id="smileyCanvas" width="600" height="400"></canvas>
-
-<button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -101,11 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
         drawSmiley(mouseX, mouseY);
     });
 });
-
-      function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-}
 </script>
 
 </body>
