@@ -3,40 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Black Hair in Video Games </title>
+<title>Black Hair in Video Games</title>
 <style>
 
     body {
-        background_color: Black; 
-        font: White; 
+        background-color: black; /* Corrected background-color property */
+        font-family: Arial, sans-serif; /* Changed font to Arial for better visibility */
+        color: white; /* Changed font color to white */
+        padding: 20px; /* Added padding around the content */
+        text-align: center; /* Center align text */
     }
-    canvas {
+    
+    h1 {
+        color: yellow; /* Set h1 color to yellow */
+    }
+    
+    #smileyCanvas {
+        display: block; /* Ensure canvas is block-level */
+        margin: 0 auto; /* Center canvas */
         border: 1px solid black;
         cursor: pointer;
+        margin-top: 20px; /* Added margin-top for spacing */
     }
+    
+    .dark-mode-toggle {
+        background-color: #555; /* Dark mode toggle button background color */
+        color: white; /* Dark mode toggle button text color */
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 20px; /* Added margin-top for spacing */
+        cursor: pointer;
+    }
+
 </style>
 </head>
 <body>
-<h1>
-    Black Hair in Video Games
-</h1>
-    <p> 
-        This video spoke about the addition of black textured hair in video games. Historically there has always been sensitivity around black hairstyles in western culture. Black hairstyles have always been seen as too ‘ethnic’ or uncommon to be fully accepted by the white community. Their hair is so fundamentally different from the textures present in white hair that it makes it near impossible for black hair to hold the same styles that white hair, and vice versa. 
-    </p>
-    <br>
-    <p>
-        In video games the problem is just as apparent as it is in the rest of society, black hair does not have as many options as white counterparts due to popularity in western culture. Of course this makes character creation and character design in video games limited for the black audiences of games. Due to this there is a movement to be more inclusive in games, especially in the character customization space in order for all players to be able to make a character that they are able to associate with. As someone who has played a lot of video games with character customization I have always noticed that there are not very many black hairstyles, however as a white individual I never really thought much of it, however this video brought new light to that issue in games. I wonder if the game developers that have mastered the black hair texture, such as the spider man game, could share their methods with other game devs for them to apply to their games. This would spread the correct hair texture to more people and thus give more creative freedom for the devs to play with new styles rather than focusing on the different texture. I am aware this curiosity is unrealistic due to how corporations function. 
-    </p>
-    <br>
-    <p>
-        The video also talked about how some companies are doing their best to add more black hairstyles but find it hard due to a lack of black representation in the companies themselves. This could be for a variety of reasons, the obvious one is clearly internalized racism within game companies. There may be some underlying factors or people that overlook possible new hires who happen to be black. This would obviously make it harder for the game devs to develop something they don’t know much about without someone from that group to help. Another reason why black rep in game companies may be lacking could be because black people just tend not to apply for those kinds of jobs, in which case we should figure out why and try to encourage more people of color to apply for jobs in game companies if that is where they wish to work. 
-    </p>
-    <br>
-    <p>
-        All in all I agree that there should be more black representation specifically in the hair of characters in video games. I think that there need to be more black hairstyles as options in character customizers and I think that there need to be more black characters who rock killer hairstyles with the correct textures. Creating games is hard, so we as consumers need to let the games know that this is what we want to see so that they know what to focus on as the game creation continues. While progress is being made on some fronts, there is still a long way to go for many games considering black hairstyles. 
-    </p>
+<h1>Black Hair in Video Games</h1>
+<p>
+    This video spoke about the addition of black textured hair in video games. Historically there has always been sensitivity around black hairstyles in western culture. Black hairstyles have always been seen as too ‘ethnic’ or uncommon to be fully accepted by the white community. Their hair is so fundamentally different from the textures present in white hair that it makes it near impossible for black hair to hold the same styles that white hair, and vice versa.
+</p>
+<br>
+<p>
+    In video games the problem is just as apparent as it is in the rest of society, black hair does not have as many options as white counterparts due to popularity in western culture. Of course this makes character creation and character design in video games limited for the black audiences of games. Due to this there is a movement to be more inclusive in games, especially in the character customization space in order for all players to be able to make a character that they are able to associate with. As someone who has played a lot of video games with character customization I have always noticed that there are not very many black hairstyles, however as a white individual I never really thought much of it, however this video brought new light to that issue in games. I wonder if the game developers that have mastered the black hair texture, such as the spider man game, could share their methods with other game devs for them to apply to their games. This would spread the correct hair texture to more people and thus give more creative freedom for the devs to play with new styles rather than focusing on the different texture. I am aware this curiosity is unrealistic due to how corporations function.
+</p>
+<br>
+<p>
+    The video also talked about how some companies are doing their best to add more black hairstyles but find it hard due to a lack of black representation in the companies themselves. This could be for a variety of reasons, the obvious one is clearly internalized racism within game companies. There may be some underlying factors or people that overlook possible new hires who happen to be black. This would obviously make it harder for the game devs to develop something they don’t know much about without someone from that group to help. Another reason why black rep in game companies may be lacking could be because black people just tend not to apply for those kinds of jobs, in which case we should figure out why and try to encourage more people of color to apply for jobs in game companies if that is where they wish to work.
+</p>
+<br>
+<p>
+    All in all I agree that there should be more black representation specifically in the hair of characters in video games. I think that there need to be more black hairstyles as options in character customizers and I think that there need to be more black characters who rock killer hairstyles with the correct textures. Creating games is hard, so we as consumers need to let the games know that this is what we want to see so that they know what to focus on as the game creation continues. While progress is being made on some fronts, there is still a long way to go for many games considering black hairstyles.
+</p>
 
 <canvas id="smileyCanvas" width="600" height="400"></canvas>
+
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -76,11 +101,11 @@ document.addEventListener("DOMContentLoaded", function() {
         drawSmiley(mouseX, mouseY);
     });
 });
-</script>
 
-</body>
-</html>
-
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+}
 </script>
 
 </body>
