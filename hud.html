@@ -20,13 +20,9 @@
     The recent agreements involving Meta Platforms Inc. (formerly Facebook) are big deals in how the internet is regulated. The Justice Department took action against Meta Platforms for issues related to how they handle people's information and competition.
   </p>
 
-  <br> 
-
   <p>
     Meta Platforms agreed to a deal where they'll pay a lot of money and promise to stop certain types of discriminatory advertising. This is important because Meta is a huge social media platform, and it shows that big tech companies are being watched closely for how they do business.
   </p>
-
-  <br> 
 
   <p> 
     The case also shows how technology, rules, and people's rights all mix together. The Department of Housing and Urban Development (HUD) accused Facebook of letting advertisers use its tools to not show housing ads to certain groups. This could break the law by discriminating against people based on where they come from or what they look like.
@@ -52,15 +48,27 @@
     Overall, these agreements with Meta Platforms show that there's a lot to think about when it comes to how the internet is regulated. They remind us that big tech companies need to play fair and follow the rules.
   </p>
 
-  <button onclick="changeBackgroundColor()">Change Background Color</button>
+  <button onclick="changeRandomBackgroundColor()">Change Background Color (Random)</button>
+  <button onclick="revertToBlack()">Revert to Black</button>
 
   <script>
-    function changeBackgroundColor() {
-      document.body.style.backgroundColor = "blue";
+    function changeRandomBackgroundColor() {
+      var randomColor = getRandomColor();
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    function revertToBlack() {
+      document.body.style.backgroundColor = "black";
+    }
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
     }
   </script>
 </body>
 </html>
-
-
-
