@@ -1,11 +1,10 @@
-<!DOCTYPE html> 
-
+<!DOCTYPE html>
 <html>
-	<head> 
-		<script>
-      let num = 21
-      function fizzbuzz(num) {
-            if (num % 3 === 0 && i % 5 === 0) {
+<head>
+    <title>Fizz Buzz</title>
+    <script>
+        function fizzbuzz(num) {
+            if (num % 3 === 0 && num % 5 === 0) {
                 console.log("FizzBuzz");
             } else if (num % 3 === 0) {
                 console.log("Fizz");
@@ -15,17 +14,16 @@
                 console.log(num.toString());
             }
         }
-
-	window.onload = function() {
-            fizzbuzz(); // Call the fizzbuzz function when the page loads
+      
+        window.onload = function() {
+            let num = 21; // Set num to your desired value
+            fizzbuzz(num); // Call the fizzbuzz function with num as an argument
         };
-		</script> 
-    
-	</head> 
-  
-	<body> 
-    <h1> Fizz Buzz </h1>
-    <p> Check Console! </p>
-	</body> 
-  
-</html> 
+    </script>
+</head>
+<body>
+    <h1>Fizz Buzz</h1>
+    <p>Check Console!</p>
+</body>
+</html>
+
